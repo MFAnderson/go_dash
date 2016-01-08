@@ -1,0 +1,5 @@
+bundle install
+npm install --global babel-cli
+npm install babel-preset-react
+npm install babel-plugin-transform-react-jsx
+
