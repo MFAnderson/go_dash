@@ -1,13 +1,32 @@
+p.heading {
+  font-family: sans-serif;
+  padding: 5px 0px 5px 0px;
+  margin: 0px 10px 20px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+p.heading span.title {
+  font-size: 26px;
+  font-family: sans-serif;
+  padding-left:5px;
+}
+
+p.heading span.subtitle {
+  font-size: 20px;
+  font-weight: lighter;
+  padding-left:5px;
+  color: grey;
+}
+
 h1.group-name {
   padding-left: 10px;
   font-family: sans-serif;
   font-weight: 500;
-  line-height: 1.1;
   font-size: 20px;
 }
 
 div.group {
-  margin-top:10px;
+  margin:10px 10px 0px 10px;
   border: 1px solid;
   border-color: grey;
   border-radius: 5px;
@@ -16,4 +35,7 @@ div.group {
 div.pipeline {
   font-family: sans-serif;
   word-wrap: break-word;
+  border: 1px solid;
+  padding: 5px 5px 5px 5px;
+  border-radius: 4px;
 }
