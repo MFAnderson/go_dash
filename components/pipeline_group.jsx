@@ -8,7 +8,7 @@ var Group = React.createClass({
         });
         return (
             <div className="group">
-              <h1>{this.props.name}</h1>
+              <h1 className="group-name">{this.props.name}</h1>
               {pipelines}
             </div>
         );

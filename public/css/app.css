@@ -1,0 +1,19 @@
+h1.group-name {
+  padding-left: 10px;
+  font-family: sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+  font-size: 20px;
+}
+
+div.group {
+  margin-top:10px;
+  border: 1px solid;
+  border-color: grey;
+  border-radius: 5px;
+}
+
+div.pipeline {
+  font-family: sans-serif;
+  word-wrap: break-word;
+}
