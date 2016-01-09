@@ -1,0 +1,16 @@
+var Group = React.createClass({
+    render: function() {
+        var pipelines = this.props.pipelines.map(function(pipeline) {
+            return (
+                <Pipeline name={pipeline.name}>
+                </Pipeline>
+            );
+        });
+        return (
+            <div className="group">
+              <h1>{this.props.name}</h1>
+              {pipelines}
+            </div>
+        );
+    }
+});
