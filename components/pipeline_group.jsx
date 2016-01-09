@@ -2,7 +2,7 @@ var Group = React.createClass({
     render: function() {
         var pipelines = this.props.pipelines.map(function(pipeline) {
             return (
-                <Pipeline name={pipeline.name}>
+                <Pipeline name={pipeline}>
                 </Pipeline>
             );
         });
