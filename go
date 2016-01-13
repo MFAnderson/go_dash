@@ -16,8 +16,12 @@ function preflight {
     .go/prereqs
 }
 
-function server {
+function compileReact {
     cat components/*.jsx | babel --plugins transform-react-jsx > public/app.js
+}
+
+function server {
+    compileReact
     ruby app.rb
 }
 
@@ -29,6 +33,8 @@ case "$1" in
     check) preflight
     ;;
     server) server
+    ;;
+    compile) compileReact
     ;;
     *) helptext
     ;;
