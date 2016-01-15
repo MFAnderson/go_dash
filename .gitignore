@@ -1,3 +1,5 @@
 public/app.js
 node_modules/
 .idea
+.ruby-version
+.creds

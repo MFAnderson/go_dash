@@ -2,21 +2,22 @@ var Dashboard = React.createClass({
     render: function() {
         if (!this.props.data.map) {
             return (
-                <div className="section">
+                <div className="row">
                     <ErrorMessage />
                 </div>
             );
         } else {
             var groups = this.props.data.map(function(group) {
+
                 return (
                     <Group name={group.name} pipelines={group.pipelines}
-                           totalPipelines={group.totalPipelines}
-                           pipelinesRemaining={group.pipelinesRemaining}>
+                           totalPipelines={group.total_pipelines}
+                           pipelinesRemaining={group.pipelines_remaining}>
                     </Group>
                 );
                 });
             return (
-                <div className="section">
+                <div className="row ">
                   {groups}
                 </div>
             );
