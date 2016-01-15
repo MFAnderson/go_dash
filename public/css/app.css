@@ -28,8 +28,7 @@ h1.group-name {
 
 div.group {
   margin:10px 10px 0px 10px;
-  border: 1px solid;
-  border-color: grey;
+  border: 1px;
   border-radius: 5px;
 }
 

@@ -9,7 +9,9 @@ var Dashboard = React.createClass({
         } else {
             var groups = this.props.data.map(function(group) {
                 return (
-                    <Group name={group.name} pipelines={group.pipelines}>
+                    <Group name={group.name} pipelines={group.pipelines}
+                           totalPipelines={group.totalPipelines}
+                           pipelinesRemaining={group.pipelinesRemaining}>
                     </Group>
                 );
                 });
