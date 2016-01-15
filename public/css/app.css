@@ -53,3 +53,8 @@ div.info {
   padding-top: 20px;
   font-size: 20px;
 }
+
+p.heading a {
+  float: right;
+  padding-top: 15px;
+}

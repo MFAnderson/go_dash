@@ -19,16 +19,15 @@ get '/pipeline_info' do
 
   expected_pipelines = {"Payments_and_Checkout" => 49,
                         "Shopping_Experience" => 53,
-                        "Content_and_Publishing" => 44,
+                        "Content_and_Publishing" => 39,
                         "Delivery_and_Business_Operations" => 0,
                         "Digital_and_Marketing_and_Enhancements" => 1,
-                        "Platform_and_Infrastructure" => 12 }
+                        "Platform_and_Infrastructure" => 8 }
 
   pipeline_groups = JSON.parse response.body
   display_info = {}
   display_info["groups"] = pipeline_groups.map do |group|
-    existing_pipelines = group["pipelines"].delete_if  { |x| x =~/.DeployToPod$/ }
-
+    existing_pipelines = group["pipelines"].delete_if  { |x| x['name'] =~/Deploy/ }
     {
       name: group["name"],
       pipelines: group["pipelines"].map{ |pipeline| pipeline["name"] },
