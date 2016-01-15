@@ -21,11 +21,12 @@ get '/pipeline_info' do
                         "Shopping_Experience" => 53,
                         "Content_and_Publishing" => 44,
                         "Delivery_and_Business_Operations" => 0,
-                        "Digital_and_Marketing_and_Enhancements" => 0,
+                        "Digital_and_Marketing_and_Enhancements" => 1,
                         "Platform_and_Infrastructure" => 12 }
 
   pipeline_groups = JSON.parse response.body
-  display_info = pipeline_groups.map do |group|
+  display_info = {}
+  display_info["groups"] = pipeline_groups.map do |group|
     existing_pipelines = group["pipelines"].delete_if  { |x| x =~/.DeployToPod$/ }
 
     {
@@ -36,6 +37,7 @@ get '/pipeline_info' do
       pipelines_remaining: pipelines_remaining(expected_pipelines[group["name"]], existing_pipelines.length)
     }
   end
+  display_info["go_host"] = ENV["HOST"]
   display_info.to_json
 end
 
